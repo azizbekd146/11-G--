@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>11-G sinf • Bitiruv</title>
+  <meta name="theme-color" content="#5a0f1e">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800;1,400&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-paper"><span>11-G</span></div>
+      <div class="envelope-front"></div>
+      <div class="envelope-flap"></div>
+    </div>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false"><i class="fa-solid fa-circle-half-stroke"></i></button>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title" id="hero-logo-wrap" hidden>
+        <span class="hero-photo-wrap">
+          <img class="hero-logo" id="hero-logo" alt="11-G sinf rasmi" draggable="false">
+        </span>
+      </h1>
+      <p class="hero-sub">Maktab hayotining eng yaxshi yillari shu yerda qoldi.</p>
+      <a href="#sozlar" class="btn">Pastga tushing</a>
+    </section>
+
+    <section class="sozlar" id="sozlar">
+      <h2>Bizning so'zlarimiz</h2>
+      <div class="quotes">
+        <blockquote>
+          Bu sinf menga faqat bilim emas, haqiqiy do'stlar ham berdi.
+          <cite>Ismingiz</cite>
+        </blockquote>
+        <blockquote>
+          Darslar tugaydi, xotiralar qoladi. Rahmat, 11-G!
+          <cite>Ismingiz</cite>
+        </blockquote>
+        <blockquote>
+          Ustozlarimizga va bir-birimizga minnatdormiz.
+          <cite>Ismingiz</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="galereya" id="galereya">
+      <h2>Фотографии 11 «Г» класса</h2>
+      <p class="note">В каждом фото — незабываемые воспоминания о нашем классе</p>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-message">
+        <p class="footer-kicker">11-G • BITIRUV XOTIRALARI</p>
+        <p id="footer-text">11-G sinf bitiruvchilari</p>
+        <p class="footer-note">Bir sinf. Minglab xotiralar. Doimo qalbimizda.</p>
+      </div>
+      <nav class="footer-links" aria-label="Pastki havolalar">
+        <a id="instagram-link" href="" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i>Instagram sahifam</a>
+        <a href="admin.html">Admin panel</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close" id="close" aria-label="Yopish">&times;</button>
+    <img id="lightbox-img" alt="" draggable="false">
+  </div>
+
+  <script src="published-data.js"></script>
+  <script src="site-data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

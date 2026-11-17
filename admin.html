@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f8">
+  <title>Admin panel • 11-G</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,800;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <form class="admin-login" id="admin-login">
+    <h1>Admin panelga kirish</h1>
+    <label>Login<input id="admin-username" type="text" autocomplete="username" required></label>
+    <label>Parol
+      <span class="password-field">
+        <input id="admin-password" type="password" autocomplete="current-password" required>
+        <button class="password-toggle" id="toggle-password" type="button" aria-label="Parolni ko‘rsatish" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+            <path class="eye-slash" d="m3 3 18 18"></path>
+          </svg>
+        </button>
+      </span>
+    </label>
+    <div class="admin-login-actions">
+      <a class="admin-button admin-button-secondary" href="./index.html">Ortga qaytish</a>
+      <button class="admin-button" type="submit">Kirish</button>
+    </div>
+    <p id="login-status" role="status" aria-live="polite"></p>
+  </form>
+<br>
+  <h1 class="admin-owner-note">Bu faqat admin uchun tegishli❗️❗️❗️</h1>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="hero-small">11-G sinf • Bitiruv</p>
+        <h1>Admin panel</h1>
+      </div>
+      <div class="admin-header-actions">
+        <a class="btn" href="./index.html">Saytni ko‘rish</a>
+      </div>
+    </header>
+
+    <p class="admin-warning">
+      Eslatma: bu oddiy kirish oynasi, haqiqiy xavfsizlik emas — login va parol kod ichida ko‘rinadi.
+      Ma’lumotlar odatda faqat shu brauzer va qurilmada saqlanadi. GitHub’da ko‘rsatish uchun pastdagi
+      “GitHub uchun ma’lumotni yuklab olish” tugmasini bosing, yuklangan published-data.js fayli bilan
+      loyihadagi shu nomli faylni almashtiring va GitHub’ga yuboring.
+      Login va parolni joylashdan oldin admin-auth.js faylida almashtiring.
+    </p>
+
+    <section class="admin-card">
+      <h2>Bosh sahifa</h2>
+      <div class="admin-fields">
+        <div class="field-wide hero-image-field">
+          <span>Bosh sahifa rasmi</span>
+          <label class="admin-button admin-button-secondary upload-button" id="hero-image-upload-wrap">
+            <span id="hero-image-action-text">Rasm tanlash</span>
+            <input id="hero-image-file" type="file" accept="image/*">
+          </label>
+          <span id="hero-image-note">Rasmni xohlagan payt almashtirishingiz mumkin.</span>
+          <img id="hero-image-preview" class="hero-image-preview" alt="Bosh sahifa rasmi" hidden>
+          <button class="admin-button admin-button-remove" id="remove-hero-image" type="button" hidden>Rasmni o‘chirish</button>
+        </div>
+        <label class="field-wide">Izoh<textarea id="hero-subtitle" rows="2"></textarea></label>
+        <label>Footer matni<input id="footer-text" type="text"></label>
+        <label>Instagram havolasi<input id="instagram-url" type="url" placeholder="https://www.instagram.com/..."></label>
+      </div>
+    </section>
+
+    <section class="admin-card">
+      <div class="admin-section-heading">
+        <h2>Iqtiboslar</h2>
+        <button class="admin-button admin-button-secondary" id="add-quote" type="button">+ Iqtibos qo‘shish</button>
+      </div>
+      <div class="admin-quotes" id="admin-quotes"></div>
+    </section>
+
+    <section class="admin-card">
+      <div class="admin-section-heading">
+        <div>
+          <h2>Galereya</h2>
+          <p>Rasmlar hajmi sayt uchun moslab kichraytiriladi.</p>
+        </div>
+        <label class="admin-button admin-button-secondary upload-button">
+          + Rasm tanlash
+          <input id="photo-files" type="file" accept="image/*" multiple>
+        </label>
+      </div>
+      <div class="admin-photos" id="admin-photos"></div>
+    </section>
+
+    <section class="admin-card admin-share">
+      <div>
+        <h2>Sayt havolasi</h2>
+        <p>Havolani nusxalang yoki qurilmangizdagi ulashish oynasidan foydalaning.</p>
+      </div>
+      <div class="share-controls">
+        <input id="site-url" type="url" readonly aria-label="Sayt havolasi">
+        <button class="admin-button" id="share-site" type="button">Ulashish / nusxalash</button>
+      </div>
+      <button class="admin-button admin-button-secondary" id="export-site-data" type="button">GitHub uchun ma’lumotni yuklab olish</button>
+    </section>
+
+    <div class="admin-actions">
+      <p id="admin-status" role="status" aria-live="polite"></p>
+      <button class="admin-button" id="save-settings" type="button">O‘zgarishlarni saqlash</button>
+      <button class="admin-button admin-button-secondary" id="admin-logout" type="button">Login/parolga qaytish</button>
+    </div>
+  </main>
+  <script src="published-data.js"></script>
+  <script src="site-data.js"></script>
+  <script src="admin-auth.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
